@@ -1,7 +1,8 @@
 %header
   .header__mercari
     = image_tag "top_image/logo.svg", class: 'mercari_logo'
-    %input{:placeholder => "キーワード検索", :size => "100%", :type => "text"}/
+    = form_tag('/items/search', method: :get, class: 'search', name: 'form') do
+      %input.mercari-header{:name => "keyword", :placeholder => "キーワードから探す", :type => "text", :value => ""}/
 
   .header__navi
     .header__navi__left
@@ -14,3 +15,4 @@
       %p.right お知らせ
       %i.fas.fa-check
       %p.right やることリスト
+

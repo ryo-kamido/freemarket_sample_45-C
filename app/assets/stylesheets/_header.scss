@@ -19,9 +19,6 @@
   flex-direction:row;
   justify-content: flex-start;
 }
-*{
-  box-sizing:border-box;
-}
 
 // ヘッダ全体とヘッダー上部
 header{
@@ -34,8 +31,9 @@ header{
     @include height_width(148px,100px);
     }
     .mercari_logo{
-      @include height_width(40px,130px);
-      margin-top:5px;
+      @include height_width(40px,148px);
+      padding-top:5px;
+
   }
 }
 input.mercari-header{
@@ -65,11 +63,11 @@ p.right{
 
 // ヘッダーの下の部分
 .header__navi{
-  @include height_width(50px,100%);
+  @include height_width(38px,950px);
   font-size: 14px;
   padding-top: 15px;
   @include flex_start();
-  margin-bottom:20px;
+  padding-left: 95px;
 
   &__left{
     @include flex();
@@ -78,15 +76,14 @@ p.right{
      display:flex;
       flex-direction:row;
       justify-content: flex-start;
+
   }
     &__right{
-      display:flex;
-      flex-direction:row;
-      justify-content: flex-end;
-      width: 800px;
-
+      @include flex();
+      width: 650px;
       }
     }
+
 .mypage_logo{
   @include height_width(25px,25px);
   border-radius: 50%;
